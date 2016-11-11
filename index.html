@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>前端自学网</title>
+<meta name="keywords" content="大学生互联网服务平台大学生互联网技术学习前端工程师前端开发大数据时代互联网+前端培训" />
+<meta name="description" content="大学生互联网服务平台大学生互联网技术学习前端工程师前端开发大数据时代互联网+前端培训" />
+<link href="/css/MyCMSBlue/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/MyCMSBlue/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="/js/ScrollPic.js"></script>
+<script type="text/javascript" src="/images/iepng/iepngfix_tilebg.js"></script>
+<script type="text/javascript">
+window.onerror=function(){return true;}
+</script>
+</head>
+
+<body>
+<div id="web_bg" style="position:absolute; width:100%; height:100%; z-index:-1"> 
+<img style="position:fixed;" src="images/bg55.png" height="100%" width="100%" /> 
+</div>
+<div id="wrapper">
+
+<!--head start-->
+<div id="head">
+
+<!--top start -->
+<div class="top">
+<div class="clearfix"></div>
+<div class="TopLogo">
+<div class="logo">
+<a href="denglu/index.asp"><img src="images/我的Logo.png" /></a>
+</div>
+<div class="tel">
+<p class="telW">技术交流</p>
+<p class="telN">QQ：244007461</p></div>
+
+</div>
+<div class="clearfix"></div>
+
+</div>
+<!--top end-->
+<!--nav start-->
+<div id="NavLink">
+<div class="NavBG">
+<!--Head Menu Start-->
+<ul id='sddm'>
+<li class='CurrentLi'>
+ <li><a href="index.html">首 页</a></li>
+ <li><a href="ht.html">HTML</a></li>
+ <li><a href="cs.html">CSS</a></li>
+ <li><a href="JS.html">JavaScript</a></li> 
+ <li><a href="jQ.html">jQuery</a></li>
+ <li><a href="knowledge.html">建站知识</a></li>
+ <li><a href="liuyanban/index.asp">给我留言吧</a></li>
+ </ul>
+<!--Head Menu End-->
+</div>
+<div class="clearfix"></div>
+</div>
+<!--nav end-->
+
+<!--focus start-->
+<div class="big">
+  <div class="con">
+    <div class="pic">
+     <img src="images/f620ec6c7bf412ede5e73ece759c6cc0.jpg" bgc="#9ba4c1" style="display:block;"/>
+     <img src="images/banner2.jpg" bgc="#efefef"/>
+     <img src="images/banner3.jpg" bgc="#9b7cb5"/>
+     <img src="images/banner4.jpg" bgc="#ffffff"/>
+     <img src="images/banner5.jpg" bgc="#0f1922"/>
+    </div>
+    <ul class="list">
+     <li class="active"></li>
+     <li></li><li></li><li></li><li></li>
+    </ul>
+    
+     <ul class="but" onselectstart="return false">
+     <li class="left">&lt;</li>
+     <li class="right">&gt;</li>
+    </ul>
+  </div>
+</div>
+  <span class="prev"></span> <span class="next"></span> </div>
+<script type="text/javascript">
+var b = 0;
+ var Time;
+ $(".list li").hover(function(){
+	  b = $(this).index();
+	  $(this).addClass("active").siblings().removeClass("active");
+	  $(".pic img").eq(b).stop(true).fadeIn("slow").siblings().hide();
+	  var bgColor = $(".pic img").eq(b).attr("bgc");
+	  $(".big").css("background",bgColor);
+ });
+ $(".right").click(function(){
+     (b<4)?(b++):(b=0);
+	 $(".list li").eq(b).addClass("active").siblings().removeClass("active");
+	 $(".pic img").eq(b).stop(true).fadeIn("slow").siblings().hide();
+	  var bgColor = $(".pic img").eq(b).attr("bgc");
+	  $(".big").css("background",bgColor);
+	 });
+ $(".left").click(function(){
+	 (b>0)?(b--):(b=4);
+	 $(".list li").eq(b).addClass("active").siblings().removeClass("active");
+	 $(".pic img").eq(b).stop(true).fadeIn("slow").siblings().hide();
+	 var bgColor = $(".pic img").eq(b).attr("bgc");
+	 $(".big").css("background",bgColor);
+	 });
+
+     function play(){
+		 Time = setInterval(function(){
+			 (b<4)?(b++):(b=0);
+			$(".list li").eq(b).addClass("active").siblings().removeClass("active");
+	        $(".pic img").eq(b).stop(true).fadeIn("slow").siblings().hide();
+	        var bgColor = $(".pic img").eq(b).attr("bgc");
+	        $(".big").css("background",bgColor);
+			 },2000);
+		 };
+		 play();
+		 
+		 $(".con").hover(function(){
+			 clearInterval(Time);
+			 },function(){
+				 play();
+				 });
+</script>
+<div class="clearfix"></div>
+</div>
+<!--head end-->
+<!--body start-->
+<div id="body">
+<div class="HeightTab clearfix"></div>
+<!--CommonBlock start-->
+<div class="CommonBlock">
+<!--left start-->
+<div class="CommonLeft">
+<!--BlockBox start-->
+<div class='BlockBox'>
+
+<!--<div class="TopicTitle">相关文章</div>
+<!--<div class="TopicMore"> <a  href='/Product'><img src="images/more.png"></a></div>-->
+</div>
+
+<div class='RightNav'><!--修改右侧显示效果-->
+<div class="ClassNav">
+<div class="NavTree">
+<ul id='suckertree1'>
+<!--备用功能<li class="html1"> <a href="ht.html">HTML基础</a>
+ <ul class="liebiao1">
+ <li> <a href="ht.html" target='_blank' >HTML简介 </a> </li> 
+ <li> <a href="ht.html" target='_blank' >HTML文件的基本结构 </a> </li> 
+ <li> <a href="ht.html" target='_blank' >认识HTML标记 </a> </li> 
+ <li> <a href="ht.html" target='_blank' >使用记事本编写HTML </a> </li> 
+ <li> <a href="ht.html" target='_blank' >使用DW编写HTML文件</a> </li>
+ <li> <a href="ht.html" target='_blank' >查看页面效果</a> </li>
+  <li> <a href="ht.html" target='_blank' >查看源文件</a> </li>
+  </ul>
+   <li> <a href="cs.html">CSS基础</a>
+    <ul>
+    <li> <a href="cs.html" target='_blank' >认识CSS</a> </li> 
+    <li> <a href="cs.html" target='_blank' >CSS的基本语法</a> </li>
+     <li> <a href="cs.html" target='_blank' >添加CSS的方法</a> </li> 
+     </ul></li> 
+     <li> <a href="JS.html">JavaScript经典特效</a> 
+<ul>
+ <li> <a href="JS.html" target='_blank' >自动刷新页面</a> </li> 
+ <li> <a href="JS.html" target='_blank' >让页面后退和前进</a> </li> 
+ <li> <a href="JS.html" target='_blank' >动态关闭页面</a> </li> 
+ <li> <a href="JS.html" target='_blank' >页面载入等待界面</a> </li> 
+ <li> <a href="JS.html" target='_blank' >无操作自动关闭窗口</a> </li> 
+ <li> <a href="JS.html" target='_blank' >修改网页标题</a> </li> 
+ <li> <a href="JS.html" target='_blank' >禁止网页放入框架</a> </li> 
+ <li> <a href="JS.html" target='_blank' >跳转到其他页面</a> </li> 
+ <li> <a href="JS.html" target='_blank' >进入页面时的问候</a> </li> 
+ <li> <a href="JS.html" target='_blank' >在网页里动态加载JavaScript</a> </li> 
+ </ul>
+    <li><a href="jQ.html">jQuery</a>
+   <ul>
+   <li> <a href="jQ.html" target='_blank' >jQuery</a></li>
+   </ul>-->
+</div>
+</div>
+</div>
+
+
+<div class=" clearfix"></div>
+</div>
+<!--BlockBox end-->
+
+</div>
+<!--left end-->
+<div class="WidthTab2"></div>
+
+<!--center start-->
+<div class="CommonCenter">
+<!--BlockBox start-->
+<!--右侧显示样式对应-->
+<div class="1F" style=" opacity:0.8;background-position:center; background-repeat:no-repeat; background-attachment:scroll; text-align:left; width:1200px; height:500px; margin:0 auto;" >
+<div class="first">
+ <ul class="study" style="list-style:none;">
+   <li class="pailie1">
+     <div class="yuanyi"></div>
+     <div class="yuanyi_html"><!--获取四块滑动效果标签-->
+       <a href="ht.html"><img src="images/image/html.png" width="200" height="196" /></a>
+     </div>
+    </li>
+   <li class="pailie2">
+     <div class="yuaner"></div>
+     <div class="yuaner_css">
+       <a href="cs.html"><img  src="images/image/css.jpg" width="200" height="196" /></a>
+     </div>
+   </li>
+   <li class="pailie3">
+     <div class="yuansan"></div>
+       <div class="yuansan_JS">
+         <a href="JS.html"><img src="images/image/JavaScript.png" width="200" height="196" /></a>
+     </div>
+   </li>
+   <li class="pailie4">
+     <div class="yuansi"></div>
+     <div class="yuansi_jQuery">
+        <a href="jQ.html"><img src="images/image/jQuery.png" width="200" height="196" /></a>
+     </div>
+   </li>
+ </ul>
+</div>
+</div>
+<script type="text/javascript">
+//开始修改四块滑动效果
+$(".yuanyi_html").mouseover(function(){
+   $(this).animate({marginTop:"100px"},500).stop(true)
+   $(".yuanyi").show(300);
+	});//向下滑动
+
+$(".yuanyi_html").mouseout(function(){
+	$(this).animate({marginTop:"0px"},500).stop(true)
+	$(".yuanyi").hide(300);
+	});//恢复原效果
+
+
+$(".yuaner_css").mouseover(function(){
+   $(".yuaner_css").animate({marginTop:"100px"},500).stop(true)
+   $(".yuaner").show(300);
+	});//向下滑动
+
+$(".yuaner_css").mouseout(function(){
+	$(".yuaner_css").animate({marginTop:"0px"},500).stop(true)
+	$(".yuaner").hide(300);
+	});//恢复原效果
+
+
+$(".yuansan_JS").mouseover(function(){
+   $(".yuansan_JS").animate({marginTop:"100px"},500).stop(true)
+   $(".yuansan").show(300);
+	});//向下滑动
+
+$(".yuansan_JS").mouseout(function(){
+	$(".yuansan_JS").animate({marginTop:"0px"},500).stop(true)
+	$(".yuansan").hide(300);
+	});//恢复原效果
+
+
+$(".yuansi_jQuery").mouseover(function(){
+   $(".yuansi_jQuery").animate({marginTop:"100px"},500).stop(true)
+   $(".yuansi").show(300);
+	});//向下滑动
+
+$(".yuansi_jQuery").mouseout(function(){
+	$(".yuansi_jQuery").animate({marginTop:"0px"},500).stop(true)
+	$(".yuansi").hide(300);
+	});//恢复原效果
+//滑动事件编写完毕 
+</script>
+<div class="CommonRight">
+<div class='BlockBox'>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="HeightTab clearfix"></div>
+<!--pro start-->
+<div class='ProductBG'>
+<!--links start-->
+<div class="MainBlock">
+<div class="topic">
+<div class="TopicTitle"><a href="knowledge.html">建站知识</a></div>
+<div class="TopicMore"> <a href="knowledge.html"><img src="/images/more.png"></a></div>
+</div>
+<div class=" clearfix"></div>
+
+<!--ProductShow start-->
+<div class="ProductShow">
+<div class="blk_29">
+<div class="LeftBotton" id="LeftArr"></div>
+<div class="Cont" id="ISL_Cont_1"><!-- 图片列表 begin -->
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<IMG src="images/up_images/HTML.jpg"' alt='建站' >
+</a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'><strong><a href="knowledge.html" target='_blank' >HTML</a></strong></p>
+<p class='ProTxt'>建站最基础的知识，也是网页制作最基础的知识...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div>
+<div class='box'></div>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/layout.jpg' alt='建站' >
+</a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'><strong>
+<a href="knowledge.html" target='_blank' >网页布局</a></strong>
+</p>
+<p class='ProTxt'>最基础的网页布局格式...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div> 
+<div class='box'></div>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/structure.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >网页结构</a></strong>
+</p>
+<p class='ProTxt'>最经典的网页结构基础...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div>
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/loyout.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >CSS布局</a></strong>
+</p><p class='ProTxt'>最生动的CSS布局基础...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/JavaScript.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >JavaScript</a></strong> 
+</p><p class='ProTxt'>JavaScript基础特效实现...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'><a href="knowledge.html"target='_blank' >
+<img src='/images/up_images/DW.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >DreamWeaver</a></strong>
+ </p><p class='ProTxt'>小白用的网页制作开发软件，建站神器...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/sublime.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >Sublime</a></strong> </p>
+<p class='ProTxt'>进阶神器，犹如大神伴你左右...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/jQuery.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >jQuery</a></strong> </p>
+<p class='ProTxt'>神一般的存在，锋利的jQuery...<
+/p><p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/ASP.png' alt='建站' ></a></div>
+<div class='BoxRight'>
+<p class='ProTitle'>
+<strong><a href="knowledge.html" target='_blank' >ASP</a></strong> </p>
+<p class='ProTxt'>动态网站开发先驱者...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'>
+<a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/PHP.jpg' alt='建站' ></a></div>
+<div class='BoxRight'>
+<p class='ProTitle'><strong>
+<a href="knowledge.html" target='_blank' >PHP </a></strong> </p>
+<p class='ProTxt'>动态网站开发继承者...</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+<div class='box'>
+<div class='BoxLeft'><a href="knowledge.html" target='_blank' >
+<img src='/images/up_images/ITdream.jpg' alt='建站' ></a>
+</div>
+<div class='BoxRight'>
+<p class='ProTitle'><strong><a href="knowledge.html" target='_blank' >我们的IT梦</a></strong> </p>
+<p class='ProTxt'>你的梦想是什么？</p>
+<p class='ProMore'><a  href="knowledge.html" target='_blank' >>>详细信息</a></p>
+</div>
+<div class='clearfix'></div></div> 
+</div>
+<div class="RightBotton" id="RightArr"></div>
+</div>
+<!--结束-->
+<SCRIPT language=javascript type=text/javascript>
+		<!--//--><![CDATA[//><!--
+		var scrollPic_02 = new ScrollPic();
+		scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+		scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+		scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+
+		scrollPic_02.frameWidth     = 978;//显示框宽度
+		scrollPic_02.pageWidth      = 978; //翻页宽度
+
+		scrollPic_02.speed          = 3; //移动速度(单位毫秒，越小越快)
+		scrollPic_02.space          = 50; //每次移动像素(单位px，越大越快)
+		scrollPic_02.autoPlay       = true; //自动播放
+		scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+		scrollPic_02.initialize(); //初始化
+							
+		//--><!]]>
+</SCRIPT>
+
+<div class="clearfix"></div>
+</DIV>
+ <!--ProductShow end-->
+<div class="HeightTab clearfix"></div>
+
+
+</div>
+<!--links end-->
+
+</div>
+<!--pro end-->
+<div class="HeightTab clearfix"></div>
+
+<div id="Links">
+<span>友情链接</span> <a href='http://www.baidu.com' target='_blank' >百度</a><a href='http://www.sina.com.cn' target='_blank' >新浪</a><a href='http://www.mycodes.net' target='_blank' >源码之家</a><a href='http://www.titan24.com' target='_blank' >体坛网</a><a href='http://www.renren.com' target='_blank' >人人网</a><a href='http://www.yahoo.com' target='_blank' >雅虎</a><a href='http://www.163.com' target='_blank' >网易</a>
+  
+</div>
+<div class="HeightTab clearfix"></div>
+
+</div>
+<!--body end-->
+<div class="clearfix"></div>
+<!--footer start-->
+<div id="footer">
+<div class="inner">
+<p><a href="/">首 页</a></p> 
+<p>Copyright Steafan All rights reserved</p>
+<!--<p>填写联系方式</p>-->
+</div>
+</div>
+</body>
+</html>
